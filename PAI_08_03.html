@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zamów jedzenie z darmową dostawą</title>
+    <script>
+        function Zamów(){
+            var bruh1 = [] 
+            var okienka = document.querySelectorAll('input[type=checkbox]:checked') //Zbiera tekst z zaznaczonych pól do zmiennej
+            for (var i = 0; i < okienka.length; i++){ 
+                bruh1.push(okienka[i].value) //Wprowadza tekst do zmiennej
+            }
+            document.write('Zamówiono:<br>' + bruh1.join('<br>')) //Wypisuje zamówienie
+        }
+        function Zamów2(){
+            var bruh2 = [] 
+            var okienka2 = document.querySelectorAll('input[type=radio]:checked') //Zbiera tekst z zaznaczonych pól do zmiennej
+            for (var i = 0; i < okienka2.length; i++){ 
+                bruh2.push(okienka2[i].value) //Wprowadza tekst do zmiennej
+            }
+            document.write('Zamówiono:<br>' + bruh2.join('<br>')) //Wypisuje zamówienie
+        }
+    </script>
+</head>
+<body>
+    <form name='pytane' action=''>
+        <h1>(1.checkbox) Co chesz zamówić?</h1><br>
+        <input type="checkbox" name="odpowiedź" value='-Kebab' id="kebab">Kebab</form>
+        <input type="checkbox" name="odpowiedź" value='-Pizza' id="pizza">Pizza</form><br>
+        <input type="checkbox" name="odpowiedź" value='-Szarma' id="szarma">Szarma</form><br>
+        <input type="checkbox" name="odpowiedź" value='-Zapiekanka' id="zapiekanka">Zapiekanka</form><br>
+        <input type="checkbox" name="odpowiedź" value='-Napoje' id="napoje">Napoje</form><br>
+    </form>
+    <button onclick="Zamów()">Zamów</button> 
+    <form name='pytane2' action=''>
+        <h1>(2.radio) Co chcesz zamówić?</h1><br>
+        <input type="radio" name="odpowiedź" value='-Kebab' id="kebab">Kebab</form>
+        <input type="radio" name="odpowiedź" value='-Pizza' id="pizza">Pizza</form><br>
+        <input type="radio" name="odpowiedź" value='-Szarma' id="szarma">Szarma</form><br>
+        <input type="radio" name="odpowiedź" value='-Zapiekanka' id="zapiekanka">Zapiekanka</form><br>
+        <input type="radio" name="odpowiedź" value='-Napoje' id="napoje">Napoje</form><br>
+    </form>
+    <button onclick="Zamów2()">Zamów</button>
+</body>
+</html>
