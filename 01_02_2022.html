@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funkcje tekstowe</title>
+        <script>
+                var wynik = document.getElementById("wynik").value;
+            function duze(){
+                text1 = document.getElementById("input1").value;
+                text1 = text1.toUpperCase();
+                document.getElementById("wynik").innerHTML = text1;
+            }
+            function male(){
+                text1 = document.getElementById("input1").value;
+                text1 = text1.toLowerCase();
+                document.getElementById("wynik").innerHTML = text1;
+            }
+            function iloscznakow(){
+                text1 = document.getElementById("input1").value;
+                text1 = text1.length;
+                document.getElementById("wynik").innerHTML = text1;
+            }
+            function iloscspacji(){
+                text1 = document.getElementById("input1").value;
+                var spacje1 = text1.split(" ").length;
+                text1 = text1 - 1;
+                document.getElementById("wynik").innerHTML = text1;
+            }
+            function zamien()
+            {
+                text1 = document.getElementById("input1").value;
+                text2 = document.getElementById("input2").value;
+                text3 = document.getElementById("input3").value;
+                text1 = text1.split(text2).join(text3);
+            }
+        </script>
+</head>
+<body>
+    <p>Wpisz ciąg znaków</p>
+    <input type="text" id="input1"><br><br>
+    <input type="button" value="Duże litery" onclick="duze()">
+    <input type="button" value="Małe litery" onclick="male()">
+    <input type="button" value="Ilość znaków" onclick="iloscznakow()">
+    <input type="button" value="Ilość spacji" onclick="iloscspacji()">
+
+    <input type="text" id="input2">
+    <input type="text" id="input3">
+    <br><hr>
+    Wynik działania funkcji: <span id="wynik"></span>
+</body>
+</html>

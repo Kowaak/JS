@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTS-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="vievport" content="width=device-width, initial-scale=1.0">
+    <title>Heron</title>
+    <script>
+        function policz(){
+            var a= parseFloat(document.forms[0].value);
+            var b= parseFloat(document.getElementById('b').value);
+            var c= parseFloat(document.formularz[2].value);
+            var s=Math.sqrt((a+b+c)*(a+b-c)*(a-b+c)*(b+c-a))/4;
+            document.getElementById('d').value=s;
+        }
+    </script>
+</head>
+<body>
+    <form action="" name="formularz">
+        <input type="radio" name="ignacy" value="x"> Pole trójkąta<br>
+        <input type="radio" name="ignacy" value="y"> Obwód trójkąta<br>
+        <p>Podaj długość boku a</p>
+            <input type="number" name="a" id="a">
+        <p>Podaj długość boku b</p>
+            <input type="number" name="b" id="b">
+        <p>Podaj długość boku c</p>
+            <input type="number" name="c" id="c">
+            <input type="button" name="enter" value="oblicz pole" onclick="policz()">
+        <p>Wynik</p>
+            <input type="number" name="d" id="d">
+    </form>
+</body>
+</html>

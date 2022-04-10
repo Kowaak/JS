@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+    <script language="javascript" src="js/skrypt.js"></script>
+    <style>
+        p {color: dodgerblue;
+            font-size: x-large;
+            font-family: sans-serif;}
+        hr { background-color: fuchsia;}
+        legend {color: mediumpurple;
+                font-size: medium;
+                font-style: italic;}
+    </style>
+</head>
+<body>
+    <br>
+    <br>
+    <p>Data napisania quizu
+        <input type="date"></p>
+    <p>Twój e-mail: 
+        <input type="email">
+    </p>
+    <input type="reset">Wyczyść dane e-mail
+    <fieldset>
+        <legend>Pytanie 1 - Javascript</legend>
+    <form name="pytanie1" action="">
+        <p>Zdarzenia onclick używamy podczas:</p>
+        <input type="radio" name="odpowiedz" value="a" id="a">Najechania myszki na obiekt<br>
+        <input type="radio" name="odpowiedz" value="b" id="b">Klikniecia myszki na obiekt<br>
+        <input type="radio" name="odpowiedz" value="c" id="c">Podwójnego klikniecia myszki na obiekt<br>
+        <input type="radio" name="odpowiedz" value="d" id="d">Potrójnego klikniecia myszki na obiekt<br>
+    </form>
+    </fieldset>
+    <fieldset>
+        <legend>Pytanie 2 - Javascript</legend>
+    <form name="pytanie2" action="">
+        <p>1 Kibibit to:</p>
+        <input type="text" name="wstaw1" value="wpisz"> Bajtów.
+    </form>
+    </fieldset>
+    <hr>
+    <fieldset>
+        <legend>Pytanie 3 - Javascript</legend>
+    <form name="pytanie3" action="">
+        <p>JavaScript jest wykonywany przez:</p>
+        <input type="radio" name="odpowiedz" value="a" id="a3">Przeglądarke internetową<br>
+        <input type="radio" name="odpowiedz" value="b" id="b3">Odkurzacz<br>
+    </form>
+    </fieldset>
+    <fieldset>
+        <legend>Pytanie 4 - Javascript</legend>
+    <form name="pytanie4" action="">
+        <p>Języki programowania to:</p>
+        <input type="checkbox" name="odpowiedz" value="a" id="a4">C++<br>
+        <input type="checkbox" name="odpowiedz" value="b" id="b4">HTML<br>
+        <input type="checkbox" name="odpowiedz" value="c" id="c4">Puton<br>
+        <input type="checkbox" name="odpowiedz" value="d" id="d4">Ada<br>
+    </form>
+    </fieldset>
+    <fieldset>
+        <legend>Pytanie 5 - Javascript</legend>
+    <form name="pytanie5" action="">
+        <p>Wybierz ulubiony samochód programisty Js : </p>
+        <label for="Cars">Samochód</label>
+        <select id="Cars" name="Cars">
+        <option value="Volvo">Volvo</option>
+        <option value="Trabant">Trabant</option>
+        <option value="Toyota">Toyota</option>
+        <option value="Audi">Audi</option>
+        </select>
+    </form>
+    </fieldset>
+    <fieldset>
+        <legend>Pytanie 6 - Javascript</legend>
+        <label for="odpowiedz">Lata (1 do 27)</label>
+        <form name="pytanie6" action="">
+        <p>Ile lat programujesz w JS: </p>
+        <input type="range" name="odpowiedz" min="0" max="27" step="9">
+    </form>
+    </fieldset>
+    <h3>Sprawdz swój wynik</h3>    
+    <input type="button" value="Sprawdż swoje punkty" onclick="sprawdz()">
+</body>
+</html>
